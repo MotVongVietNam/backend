@@ -1,8 +1,6 @@
 ```
-npm install
-npm run dev
+bun install
+bun dev
 ```
 
-```
-npm run deploy
-```
+Available on port 8787.

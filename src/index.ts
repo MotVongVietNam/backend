@@ -2,11 +2,18 @@ import { Env, Hono } from "hono";
 import { logger } from "hono/logger";
 import { supabaseMiddleware } from "./middlewares/supabase";
 import { Context } from "hono";
+import { swaggerUI } from "@hono/swagger-ui";
+import openapi from "./openapi.json";
 
 const app = new Hono();
 
 app.use(logger());
 app.use(supabaseMiddleware);
+
+app.get("/", swaggerUI({ url: "/openapi" }));
+app.get("/openapi", async (c: Context<Env>) => {
+  return c.json(openapi);
+});
 
 app.get("/api/users", async (c: Context<Env>) => {
   const { data, error, count } = await c.var.supabase

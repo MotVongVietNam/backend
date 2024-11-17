@@ -5,6 +5,7 @@
     "deploy": "wrangler deploy --minify"
   },
   "dependencies": {
+    "@hono/swagger-ui": "^0.4.1",
     "@supabase/supabase-js": "^2.46.1",
     "hono": "^4.6.10"
   },
