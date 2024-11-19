@@ -62,6 +62,30 @@
 				}
 			}
 		},
+		"/api/users/{id}": {
+			"get": {
+				"tags": ["users"],
+				"summary": "Get user by ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A single user",
+						"content": {
+							"application/json": {
+								"schema": { "type": "object" }
+							}
+						}
+					}
+				}
+			}
+		},
 		"/api/users/{id}/dishes": {
 			"get": {
 				"tags": ["users"],
@@ -153,6 +177,30 @@
 				}
 			}
 		},
+		"/api/landmarks/{id}": {
+			"get": {
+				"tags": ["landmarks"],
+				"summary": "Get landmark by ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A single landmark",
+						"content": {
+							"application/json": {
+								"schema": { "type": "object" }
+							}
+						}
+					}
+				}
+			}
+		},
 		"/api/landmarks/{id}/feedbacks": {
 			"get": {
 				"tags": ["landmarks"],
@@ -205,6 +253,30 @@
 										"count": { "type": "integer" }
 									}
 								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/restaurants/{id}": {
+			"get": {
+				"tags": ["restaurants"],
+				"summary": "Get restaurant by ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A single restaurant",
+						"content": {
+							"application/json": {
+								"schema": { "type": "object" }
 							}
 						}
 					}
@@ -296,6 +368,30 @@
 										"count": { "type": "integer" }
 									}
 								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/dishes/{id}": {
+			"get": {
+				"tags": ["dishes"],
+				"summary": "Get dish by ID",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A single dish",
+						"content": {
+							"application/json": {
+								"schema": { "type": "object" }
 							}
 						}
 					}
