@@ -1,297 +1,339 @@
 {
-  "openapi": "3.0.0",
-  "info": {
-    "title": "Mot Vong Viet Nam API",
-    "version": "1.0.0"
-  },
-  "paths": {
-    "/api/users": {
-      "get": {
-        "summary": "Get all users",
-        "responses": {
-          "200": {
-            "description": "A list of users",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/users/{id}/dishes": {
-      "get": {
-        "summary": "Get favorite dishes of a user",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string" }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of favorite dishes",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/users/{id}/places": {
-      "get": {
-        "summary": "Get favorite places of a user",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string" }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of favorite places",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/landmarks": {
-      "get": {
-        "summary": "Get all landmarks",
-        "responses": {
-          "200": {
-            "description": "A list of landmarks",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/landmarks/{id}/feedbacks": {
-      "get": {
-        "summary": "Get feedbacks for a landmark",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string" }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of feedbacks",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/restaurants": {
-      "get": {
-        "summary": "Get all restaurants",
-        "responses": {
-          "200": {
-            "description": "A list of restaurants",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/restaurants/{id}/feedbacks": {
-      "get": {
-        "summary": "Get feedbacks for a restaurant",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string" }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of feedbacks",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/restaurants/{id}/dishes": {
-      "get": {
-        "summary": "Get dishes of a restaurant",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string" }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of dishes",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/dishes": {
-      "get": {
-        "summary": "Get all dishes",
-        "responses": {
-          "200": {
-            "description": "A list of dishes",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/dishes/{id}/feedbacks": {
-      "get": {
-        "summary": "Get feedbacks for a dish",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": { "type": "string" }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "A list of feedbacks",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "type": "array",
-                      "items": { "type": "object" }
-                    },
-                    "count": { "type": "integer" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Mot Vong Viet Nam API",
+		"version": "1.0.0"
+	},
+	"paths": {
+		"/api/auth/google": {
+			"get": {
+				"tags": ["auth"],
+				"summary": "Authenticate with Google",
+				"responses": {
+					"302": {
+						"description": "Redirect to Google OAuth"
+					}
+				}
+			}
+		},
+		"/api/auth/signout": {
+			"get": {
+				"tags": ["auth"],
+				"summary": "Sign out",
+				"responses": {
+					"200": {
+						"description": "Sign out response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"error": { "type": "string" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/users": {
+			"get": {
+				"tags": ["users"],
+				"summary": "Get all users",
+				"responses": {
+					"200": {
+						"description": "A list of users",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/users/{id}/dishes": {
+			"get": {
+				"tags": ["users"],
+				"summary": "Get favorite dishes of a user",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of favorite dishes",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/users/{id}/places": {
+			"get": {
+				"tags": ["users"],
+				"summary": "Get favorite places of a user",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of favorite places",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/landmarks": {
+			"get": {
+				"tags": ["landmarks"],
+				"summary": "Get all landmarks",
+				"responses": {
+					"200": {
+						"description": "A list of landmarks",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/landmarks/{id}/feedbacks": {
+			"get": {
+				"tags": ["landmarks"],
+				"summary": "Get feedbacks for a landmark",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of feedbacks",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/restaurants": {
+			"get": {
+				"tags": ["restaurants"],
+				"summary": "Get all restaurants",
+				"responses": {
+					"200": {
+						"description": "A list of restaurants",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/restaurants/{id}/feedbacks": {
+			"get": {
+				"tags": ["restaurants"],
+				"summary": "Get feedbacks for a restaurant",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of feedbacks",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/restaurants/{id}/dishes": {
+			"get": {
+				"tags": ["restaurants"],
+				"summary": "Get dishes of a restaurant",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of dishes",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/dishes": {
+			"get": {
+				"tags": ["dishes"],
+				"summary": "Get all dishes",
+				"responses": {
+					"200": {
+						"description": "A list of dishes",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/dishes/{id}/feedbacks": {
+			"get": {
+				"tags": ["dishes"],
+				"summary": "Get feedbacks for a dish",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "A list of feedbacks",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"data": {
+											"type": "array",
+											"items": { "type": "object" }
+										},
+										"count": { "type": "integer" }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -1,13 +1,11 @@
+import type { SupabaseClient } from "@supabase/supabase-js";
 import {} from "hono";
-import { SupabaseClient } from "@supabase/supabase-js";
 
 declare module "hono" {
-  interface ContextRenderer {
-    (
-      content: string | Promise<string>,
-      props?: { title?: string; path?: string }
-    ): Response;
-  }
+  type ContextRenderer = (
+    content: string | Promise<string>,
+    props?: { title?: string; path?: string }
+  ) => Response;
 
   interface Env {
     Variables: {
